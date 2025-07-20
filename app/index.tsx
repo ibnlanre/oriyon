@@ -1,7 +1,6 @@
 import type { LinksFunction, MetaArgs } from "react-router";
 
 import { RouterProvider } from "react-router";
-import { } from "@react-router/dev/routes";
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 

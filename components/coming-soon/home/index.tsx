@@ -5,7 +5,7 @@ import { CountdownUnit } from "../countdown-unit";
 import clsx from "clsx";
 
 export function Home() {
-  const [launchDate] = useState(new Date("2025-09-01T00:00:00"));
+  const [launchDate] = useState(new Date("2025-08-04T00:00:00"));
   const [isVisible, setIsVisible] = useState(false);
   const [timeRemaining, setTimeRemaining] = useState({
     days: 0,
