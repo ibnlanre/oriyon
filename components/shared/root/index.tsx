@@ -1,6 +1,7 @@
 import { Header } from "components/shared/header";
 import { Fragment } from "react";
 import { Outlet } from "react-router";
+import { Footer } from "../footer";
 
 export function Root() {
   return (
@@ -39,6 +40,7 @@ export function Root() {
 
       <Header />
       <Outlet />
+      <Footer />
     </Fragment>
   );
 }

@@ -1,11 +1,11 @@
-import { HeaderTop } from "components/shared/header/header-top";
 import { FooterMain } from "./footer-main";
+import { FooterTop } from "./footer-top";
 
 export function Footer() {
   return (
-    <header className='w-full bg-white shadow-sm'>
-      <HeaderTop />
+    <footer className='w-full '>
+      <FooterTop />
       <FooterMain />
-    </header>
+    </footer>
   );
 }
