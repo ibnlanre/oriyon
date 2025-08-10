@@ -55,6 +55,7 @@ export function HeaderMain() {
                 text='contact us'
                 color='#00cfc0'
                 bgColor='#060606'
+                className='hidden lg:block'
                 py={3}
                 onClick={() => {
                   console.log("Navigate to contact us");
@@ -80,13 +81,14 @@ export function HeaderMain() {
               <MainNavItem label='Store' />
               <MainNavItem label='Our Network' />
 
-              <div className='pt-4 border-t border-[#cdd0d5]'>
+              <div className='pt-4 border-t border-[#cdd0d5] flex justify-center sm:justify-start'>
                 <CtaButton
                   text='contact us'
                   color='#00cfc0'
                   bgColor='#060606'
+                  className='w-full sm:w-fit'
                   py={3}
-                  px={5}
+                  px={6}
                   onClick={() => {
                     console.log("Navigate to contact us");
                   }}
