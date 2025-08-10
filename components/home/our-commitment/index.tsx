@@ -1,6 +1,6 @@
 import { Flex, Image, Stack } from "@mantine/core";
 
-// EARTH Commitment Item Component
+// EARTH Commitment Item
 interface EarthItemProps {
   letter: string;
   title: string;
@@ -33,7 +33,7 @@ function EarthItem({
   );
 }
 
-// Partners Marquee Component
+// Partners Marquee
 function PartnersMarquee() {
   const partners = [
     { name: "Logoipsum", icon: "🏢" },
