@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500');
-@import url('https://fonts.googleapis.com/css2?family=Neue+Montreal:wght@500');
-@import '@mantine/core/styles.css';
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500");
+@import url("https://fonts.googleapis.com/css2?family=Neue+Montreal:wght@500");
+
+@layer mantine {
+  @import "tailwindcss/preflight";
+}
 
 :root {
   font-synthesis: none;
@@ -16,9 +18,9 @@
 }
 
 .font-fredoka {
-  font-family: 'Fredoka', sans-serif;
+  font-family: "Fredoka", sans-serif;
 }
 
 .font-neue-montreal {
-  font-family: 'Neue Montreal', sans-serif;
+  font-family: "Neue Montreal", sans-serif;
 }
