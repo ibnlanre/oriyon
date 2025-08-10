@@ -2,7 +2,7 @@ import { Image, Text } from "@mantine/core";
 
 export function AboutSection() {
   return (
-    <section className='pt-12 sm:py-20 px-4 md:px-8 lg:px-16 bg-gray-50'>
+    <section className='pt-12 pb-20 sm:py-20 px-4 md:px-8 lg:px-16 bg-gray-50'>
       <div className='max-w-7xl mx-auto'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start'>
           <div className='lg:col-span-5 lg:row-span-3'>
