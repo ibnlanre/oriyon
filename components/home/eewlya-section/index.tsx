@@ -1,6 +1,8 @@
 import { Box, Card, Flex, Stack, Text, Title } from "@mantine/core";
 import { CtaButton } from "components/shared/cta-button";
 
+import { ImageMarquee } from "./image-marquee";
+
 export function EEWLYA() {
   return (
     <Stack gap='0'>
@@ -115,6 +117,9 @@ export function EEWLYA() {
           />
         </Flex>
       </Box>
+
+      {/* Women in Agriculture Marquee Section */}
+      <ImageMarquee />
     </Stack>
   );
 }
@@ -139,12 +144,10 @@ export function AboutEEWYLA({ title, description }: AboutEEWYLAProps) {
         justifyContent: "center",
       }}
     >
-      <Title order={3} fz={{ base: 20, sm: 22, md: 24 }} fw={700} mb='1rem'>
+      <Title order={3} fz={24} fw={700} mb='1rem'>
         {title}
       </Title>
-      <Text fz={{ base: 14, sm: 15, md: 16 }} lh={1.6}>
-        {description}
-      </Text>
+      <Text>{description}</Text>
     </Box>
   );
 }
