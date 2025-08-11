@@ -34,7 +34,7 @@ function CommitmentCard({
     >
       <Stack gap={24} className='flex md:flex-row'>
         <Box
-          className='md:min-w-[400px]'
+          className='md:min-w-[400px] max-w-[400px]'
           style={{
             overflow: "hidden",
             background: "#f7f7f7",
@@ -125,7 +125,7 @@ export function CommitmentStandards() {
       {/* Our Impact */}
       <CommitmentCard
         title='Our Impact'
-        imageSrc='/images/livestock-goats.svg'
+        imageSrc='/images/lady-with-phone.svg'
         imageAlt='Monitoring livestock performance'
         mb='lg'
       >
@@ -146,7 +146,7 @@ export function CommitmentStandards() {
       {/* Our Commitment */}
       <CommitmentCard
         title='Our Commitment'
-        imageSrc='/images/mission-goat-woman.svg'
+        imageSrc='/images/lady-with-egg.svg'
         imageAlt='Smiling farmer with poultry inside enclosure'
       >
         <Text>

@@ -7,12 +7,12 @@ interface ImageMarqueeProps {
 
 export function ImageMarquee({ title, subtitle }: ImageMarqueeProps) {
   const images = [
-    "/images/women/1.svg",
-    "/images/women/2.svg",
-    "/images/women/3.svg",
-    "/images/women/4.svg",
-    "/images/women/5.svg",
-    "/images/women/6.svg",
+    "/images/women-in-agric/1.svg",
+    "/images/women-in-agric/2.svg",
+    "/images/women-in-agric/3.svg",
+    "/images/women-in-agric/4.svg",
+    "/images/women-in-agric/5.svg",
+    "/images/women-in-agric/6.svg",
   ];
 
   // continuous flow for two rows
