@@ -64,12 +64,16 @@ export function Offers() {
         p={{ base: "2rem 1rem", sm: "3rem 1rem" }}
         className='max-w-7xl mx-auto'
       >
-        <Box mb='1.5rem'>
-          <Title order={2} fz={{ base: 28, sm: 32 }} fw={700} mb='sm'>
-            What We Offer
-          </Title>
-          <Divider size='sm' color='black' />
-        </Box>
+        <Title
+          order={2}
+          fz={{ base: 28, sm: 32 }}
+          fw={700}
+          mb='xl'
+          pb='sm'
+          className='border-b border-gray-300'
+        >
+          What We Offer
+        </Title>
 
         <Accordion
           variant='separated'
@@ -127,12 +131,16 @@ export function Offers() {
       p={{ base: "2rem 1rem", sm: "3rem 2rem", md: "4rem 3rem" }}
       className='max-w-7xl mx-auto'
     >
-      <Box mb='2.5rem'>
-        <Title order={2} fz={{ base: 28, sm: 32, md: 36 }} fw={700} mb='md'>
-          What We Offer
-        </Title>
-        <Divider size='sm' color='black' />
-      </Box>
+      <Title
+        order={2}
+        fz={{ base: 28, sm: 32 }}
+        fw={700}
+        mb='xl'
+        pb='sm'
+        className='border-b border-gray-300'
+      >
+        What We Offer
+      </Title>
 
       <Group justify='space-between' align='flex-start' gap='xl' wrap='wrap'>
         {/* List */}
