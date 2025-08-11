@@ -60,7 +60,7 @@ function CommitmentCard({
 
 export function CommitmentStandards() {
   return (
-    <Stack bg='white' className='max-w-7xl mx-auto px-4 py-12'>
+    <Stack bg='white' className='max-w-7xl mx-auto px-4 pt-12'>
       {/* Hero block */}
       <Stack pos='relative' mb={{ base: 20, sm: 56 }} w='100%'>
         <Flex className='w-full lg:w-[80%]'>

@@ -59,11 +59,7 @@ export function Offers() {
   if (isMobile) {
     // Mobile: Accordion layout
     return (
-      <Box
-        bg='white'
-        p={{ base: "2rem 1rem", sm: "3rem 1rem" }}
-        className='max-w-7xl mx-auto'
-      >
+      <Box bg='white' className='max-w-7xl mx-auto px-4 py-24'>
         <Title
           order={2}
           fz={{ base: 28, sm: 32 }}
@@ -126,11 +122,7 @@ export function Offers() {
   const active = offers.find((o) => o.id === activeId) ?? offers[0];
 
   return (
-    <Box
-      bg='white'
-      p={{ base: "2rem 1rem", sm: "3rem 2rem", md: "4rem 3rem" }}
-      className='max-w-7xl mx-auto'
-    >
+    <Box bg='white' className='max-w-7xl mx-auto px-4 py-24'>
       <Title
         order={2}
         fz={{ base: 28, sm: 32 }}
