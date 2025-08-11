@@ -1,4 +1,5 @@
 import { AboutSection } from "components/home/about";
+import { CommitmentStandards } from "components/home/commitment-standards";
 import { EEWLYA } from "components/home/eewlya-section";
 import { OriyonHero } from "components/home/hero";
 import { MissionSection } from "components/home/mission";
@@ -12,6 +13,7 @@ export default function Home() {
       <OriyonHero />
       <AboutSection />
       <MissionSection />
+      <CommitmentStandards />
       <Offers />
       <EEWLYA />
       <ProgramDetails />
