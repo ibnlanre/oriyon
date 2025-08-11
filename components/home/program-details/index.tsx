@@ -9,7 +9,7 @@ import {
   Title,
 } from "@mantine/core";
 
-export function ProgramDetailsSection() {
+export function ProgramDetails() {
   return (
     <Box
       className='px-4 py-10'
