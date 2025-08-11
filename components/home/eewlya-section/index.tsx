@@ -19,7 +19,7 @@ export function EEWLYA() {
           justifyContent: "center",
         }}
       >
-        {/* Overlaid White Card - Now positioned relative to hero section */}
+        {/* Overlaid White Card */}
         <Card
           shadow='xl'
           style={{
@@ -57,7 +57,7 @@ export function EEWLYA() {
         </Card>
       </Box>
 
-      {/* Bottom Section -  Yellow Background with Content */}
+      {/*  Yellow Background with Content */}
       <Box
         pos='relative'
         w='100%'
