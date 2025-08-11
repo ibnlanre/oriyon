@@ -62,9 +62,9 @@ export function EEWLYA() {
         pos='relative'
         w='100%'
         bg='#DEE947'
-        p={{ base: "15rem 1rem 4rem 1rem", sm: "8rem 1rem 4rem 1rem" }}
+        p={{ base: "15rem 0rem 4rem 0rem", sm: "8rem 0rem 4rem 0rem" }}
       >
-        <Box ta='left' px='1rem' maw={1200} m='0 auto'>
+        <Box ta='left' px='1rem' m='0 auto' className='max-w-7xl'>
           <Title order={2} fz={{ base: 32, sm: 40, md: 48 }} fw={700} mb={10}>
             What is E.E.W.Y.L.A?
           </Title>
@@ -82,7 +82,6 @@ export function EEWLYA() {
               height: "1px",
               backgroundColor: "black",
               width: "100%",
-              maxWidth: "800px",
               margin: "0",
             }}
           />
@@ -91,10 +90,9 @@ export function EEWLYA() {
         <Flex
           justify='center'
           gap='0'
-          maw={1200}
           m='2rem auto 0 auto'
-          px='1rem'
           wrap='wrap'
+          className='max-w-7xl px-4'
         >
           <AboutEEWYLA
             title='Our Mission'
