@@ -9,7 +9,7 @@ export function MissionSection({ className }: MissionSectionProps) {
   return (
     <Stack gap={44} className={className}>
       <div
-        className='px-8 md:px-16 lg:px-32 py-16 md:py-20'
+        className='px-4 md:px-16 lg:px-32 py-16 md:py-20'
         style={{ backgroundColor: "#dee947" }}
       >
         <div className='max-w-7xl mx-auto w-full'>
