@@ -4,6 +4,7 @@
 
 @layer mantine {
   @import "tailwindcss/preflight";
+  @import "tailwindcss";
 }
 
 :root {

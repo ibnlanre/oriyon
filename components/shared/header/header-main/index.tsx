@@ -3,7 +3,7 @@ import { CtaButton } from "components/shared/cta-button";
 import { OriyonIcon } from "components/shared/icons/oriyon-icon";
 import { PAGES } from "libraries";
 import { useState } from "react";
-import { useLocation } from "react-router";
+import { NavLink, useLocation } from "react-router";
 
 interface MainNavItemProps {
   label: string;
@@ -16,8 +16,8 @@ const MainNavItem = ({ label, href = "#" }: MainNavItemProps) => {
 
   return (
     <Text
-      component='a'
-      href={href}
+      component={NavLink}
+      to={href}
       className={`text-base font-fredoka transition-colors hover:text-[#1d6731] ${
         isActive ? "text-[#1d6731] font-medium" : "text-black font-normal"
       }`}
@@ -29,7 +29,6 @@ const MainNavItem = ({ label, href = "#" }: MainNavItemProps) => {
 
 export function HeaderMain() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { pathname } = useLocation();
 
   return (
     <div className='bg-white py-4'>
@@ -48,7 +47,7 @@ export function HeaderMain() {
             <Group gap={24} className='lg:flex hidden '>
               <MainNavItem label='Who We Are' href={PAGES.HOME} />
               <MainNavItem label='What We Do' href={PAGES.SERVICES} />
-              <MainNavItem label='Store' />
+              <MainNavItem label='Store' href={PAGES.STORE} />
               <MainNavItem label='Our Network' />
             </Group>
 
@@ -81,7 +80,7 @@ export function HeaderMain() {
             <div className='flex flex-col gap-4'>
               <MainNavItem label='Who We Are' href={PAGES.HOME} />
               <MainNavItem label='What We Do' href={PAGES.SERVICES} />
-              <MainNavItem label='Store' />
+              <MainNavItem label='Store' href={PAGES.STORE} />
               <MainNavItem label='Our Network' />
 
               <div className='pt-4 border-t border-[#cdd0d5] flex justify-center sm:justify-start'>

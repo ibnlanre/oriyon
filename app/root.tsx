@@ -1,4 +1,5 @@
 import { theme } from "components/shared/theme";
+import { NuqsAdapter } from "nuqs/adapters/react-router/v7";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router";
@@ -15,9 +16,11 @@ const root = createRoot(container!);
 
 root.render(
   <StrictMode>
-    <MantineProvider theme={theme}>
-      <RouterProvider router={router} />
-    </MantineProvider>
+    <NuqsAdapter>
+      <MantineProvider theme={theme}>
+        <RouterProvider router={router} />
+      </MantineProvider>
+    </NuqsAdapter>
   </StrictMode>
 );
 

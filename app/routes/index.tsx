@@ -5,6 +5,7 @@ import { PAGES } from "libraries";
 import { createBrowserRouter } from "react-router";
 
 import Home from "@/modules/home";
+import Products from "@/modules/products";
 import Services from "@/modules/services";
 
 export const router = createBrowserRouter([
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: PAGES.SERVICES,
         Component: Services,
+      },
+      {
+        path: PAGES.STORE,
+        Component: Products,
       },
     ],
   },
