@@ -100,7 +100,7 @@ export function ProductCard({
             variant='outline'
             color={favorite ? "red" : "gray"}
             aria-label={favorite ? "Remove from favorites" : "Add to favorites"}
-            className='flex items-center justify-center border-2 border-gray-300 px-4 py-2 hover:bg-gray-100'
+            className='flex items-center gap-2 justify-center border-2 border-gray-300 px-4 py-2 hover:bg-gray-100'
           >
             <Heart
               size={20}
@@ -116,7 +116,7 @@ export function ProductCard({
           <UnstyledButton
             onClick={handleAddToCart}
             ml='auto'
-            className='flex items-center justify-center border-2 border-gray-300 px-4 py-2 hover:bg-gray-100'
+            className='flex items-center gap-2 justify-center border-2 border-gray-300 px-4 py-2 hover:bg-gray-100'
           >
             <ShoppingCart size={18} />
             Add to Cart
