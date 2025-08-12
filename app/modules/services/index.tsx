@@ -1,4 +1,5 @@
 import { About } from "components/services/about";
+import { Newletter } from "components/services/newletter";
 import { SharedHero } from "components/shared/hero";
 import { Fragment } from "react/jsx-runtime";
 
@@ -18,6 +19,7 @@ export default function Services() {
 
       <main className='min-h-screen bg-white'>
         <About />
+        <Newletter />
       </main>
     </Fragment>
   );

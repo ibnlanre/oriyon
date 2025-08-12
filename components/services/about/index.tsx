@@ -238,7 +238,7 @@ function NavRow({
 
 function AboutDetail({ item }: { item: AboutItemData }) {
   return (
-    <Stack gap='lg'>
+    <Stack gap='lg' className='sm:min-h-[650px]'>
       {item.imageSrc && (
         <Box
           style={{
@@ -275,7 +275,7 @@ function AboutDetail({ item }: { item: AboutItemData }) {
         </Title>
 
         {Array.isArray(item.description) ? (
-          <Stack gap='md'>
+          <Stack gap={32}>
             {item.description.map((desc, index) => (
               <Text key={index} fz={{ base: 14, sm: 18 }}>
                 {desc}
