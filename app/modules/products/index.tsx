@@ -10,7 +10,6 @@ import {
 } from "nuqs";
 import { Fragment, useMemo, useState } from "react";
 
-// Mock data - replace with actual API calls
 const mockProducts = [
   {
     id: "1",
@@ -119,17 +118,7 @@ const mockPriceRanges = [
   { value: "150+", label: "Over $150" },
 ];
 
-// Define the filter types
 type FilterType = "category" | "brand" | "color" | "priceRange" | "search";
-
-// Define the filter state interface to match nuqs types
-interface FilterState {
-  category?: string[] | null;
-  brand?: string[] | null;
-  color?: string[] | null;
-  priceRange?: string | null;
-  search?: string | null;
-}
 
 export default function Products() {
   const resultsPerPage = 15;
@@ -138,7 +127,6 @@ export default function Products() {
 
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Use querystates for all filter types
   const [activeFilters, setActiveFilters] = useQueryStates({
     category: parseAsArrayOf(parseAsStringEnum(["goat", "sheep", "pork"])),
     brand: parseAsArrayOf(parseAsString),
@@ -147,7 +135,6 @@ export default function Products() {
     search: parseAsString,
   });
 
-  // Filter products based on active filters
   const filteredProducts = useMemo(() => {
     return mockProducts.filter((product) => {
       // Category filter
@@ -201,7 +188,6 @@ export default function Products() {
       ...prev,
       [type]: value,
     }));
-    // Reset to first page when filters change
     setCurrentPage(1);
   };
 
@@ -216,7 +202,7 @@ export default function Products() {
       }
       return {
         ...prev,
-        [type]: undefined,
+        [type]: "",
       };
     });
   };
@@ -226,25 +212,22 @@ export default function Products() {
       category: [],
       brand: [],
       color: [],
-      priceRange: undefined,
-      search: undefined,
+      priceRange: "",
+      search: "",
     });
     setCurrentPage(1);
   };
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    // Scroll to top when page changes
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleAddToCart = (productId: string) => {
-    // Add to cart logic here
     console.log("Added to cart:", productId);
   };
 
   const handleToggleFavorite = (productId: string) => {
-    // Toggle favorite logic here
     console.log("Toggled favorite:", productId);
   };
 
