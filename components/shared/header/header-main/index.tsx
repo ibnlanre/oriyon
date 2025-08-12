@@ -1,32 +1,35 @@
 import { Burger, Flex, Group, Text } from "@mantine/core";
 import { CtaButton } from "components/shared/cta-button";
 import { OriyonIcon } from "components/shared/icons/oriyon-icon";
+import { PAGES } from "libraries";
 import { useState } from "react";
+import { useLocation } from "react-router";
 
 interface MainNavItemProps {
   label: string;
   href?: string;
-  active?: boolean;
 }
 
-const MainNavItem = ({
-  label,
-  href = "#",
-  active = false,
-}: MainNavItemProps) => (
-  <Text
-    component='a'
-    href={href}
-    className={`text-base font-fredoka transition-colors hover:text-[#1d6731] ${
-      active ? "text-[#1d6731] font-medium" : "text-black font-normal"
-    }`}
-  >
-    {label}
-  </Text>
-);
+const MainNavItem = ({ label, href = "#" }: MainNavItemProps) => {
+  const { pathname } = useLocation();
+  const isActive = pathname === href;
+
+  return (
+    <Text
+      component='a'
+      href={href}
+      className={`text-base font-fredoka transition-colors hover:text-[#1d6731] ${
+        isActive ? "text-[#1d6731] font-medium" : "text-black font-normal"
+      }`}
+    >
+      {label}
+    </Text>
+  );
+};
 
 export function HeaderMain() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { pathname } = useLocation();
 
   return (
     <div className='bg-white py-4'>
@@ -43,8 +46,8 @@ export function HeaderMain() {
           <Flex gap={24} align='center'>
             {/* Desktop Navigation */}
             <Group gap={24} className='lg:flex hidden '>
-              <MainNavItem label='Who We Are' active />
-              <MainNavItem label='What We Do' />
+              <MainNavItem label='Who We Are' href={PAGES.HOME} />
+              <MainNavItem label='What We Do' href={PAGES.SERVICES} />
               <MainNavItem label='Store' />
               <MainNavItem label='Our Network' />
             </Group>
@@ -76,8 +79,8 @@ export function HeaderMain() {
         {mobileMenuOpen && (
           <div className='lg:hidden mt-4 pt-4 border-t border-[#cdd0d5]'>
             <div className='flex flex-col gap-4'>
-              <MainNavItem label='Who We Are' active />
-              <MainNavItem label='What We Do' />
+              <MainNavItem label='Who We Are' href={PAGES.HOME} />
+              <MainNavItem label='What We Do' href={PAGES.SERVICES} />
               <MainNavItem label='Store' />
               <MainNavItem label='Our Network' />
 
@@ -96,7 +99,6 @@ export function HeaderMain() {
               </div>
 
               <div className='pt-4 border-t border-[#cdd0d5] flex flex-col gap-3'>
-                <MainNavItem label='Store' />
                 <MainNavItem label='My Account' />
                 <MainNavItem label='Order Tracking' />
                 <MainNavItem label='Blog' />
