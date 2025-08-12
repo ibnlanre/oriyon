@@ -24,7 +24,6 @@ export interface ActiveFilter {
   label: string;
 }
 
-// Define the filter types to match the querystate structure
 export type FilterType =
   | "category"
   | "brand"
@@ -64,7 +63,6 @@ export function Filters({
     onFilterChange("search", value);
   };
 
-  // Convert querystate to ActiveFilter array for display
   const displayFilters: ActiveFilter[] = [];
 
   if (activeFilters.category && activeFilters.category.length > 0) {
