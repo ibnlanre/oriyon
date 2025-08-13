@@ -1,4 +1,3 @@
-import { ComingSoon } from "components/coming-soon/home";
 import { ErrorElement } from "components/shared/error";
 import { Root } from "components/shared/root";
 import { PAGES } from "libraries";
@@ -16,7 +15,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: process.env.NODE_ENV === "production" ? ComingSoon : Home,
+        Component: Home,
       },
       {
         path: PAGES.SERVICES,
